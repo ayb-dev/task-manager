@@ -9,6 +9,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'add-task', component: AddTaskComponent },
+  { path: 'task', component: TaskComponent },
   { path: 'task/:id', component: TaskComponent },
   { path: '**', component: NotFoundComponent},
 ];

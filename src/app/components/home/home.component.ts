@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from 'src/app/services/tasks.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -8,14 +9,15 @@ import { TasksService } from 'src/app/services/tasks.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private taskSer: TasksService) {
-    console.log(this.taskSer.tasks)
+  constructor(private tasksSer: TasksService, private title: Title) {
+    this.title.setTitle('Add New Task - Task Manager');
+    console.log(this.tasksSer.tasks);
   }
 
   ngOnInit() {
   }
   deleteTask(i) {
-    this.taskSer.deleteTask(i);
+    this.tasksSer.deleteTask(i);
   }
 
 }

@@ -6,12 +6,7 @@ import { Task } from '../interfaces/task';
 })
 export class TasksService {
 
-  tasks: Array<Task> = [
-    {
-      title: '1',
-      description: 'test'
-    }
-  ];
+  tasks: Array<Task> = [];
 
   constructor() { }
 
@@ -24,5 +19,9 @@ export class TasksService {
       title: taskTitl,
       description: taskDes
     })
+  }
+
+  editTask(i, data) {
+    this.tasks[i] = data;
   }
 }
