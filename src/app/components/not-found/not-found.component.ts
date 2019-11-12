@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 export class NotFoundComponent implements OnInit {
 
   constructor(private title: Title) {
-    this.title.setTitle('Ooooops - Task Manager');
+    this.title.setTitle('Ooooops');
   }
 
   ngOnInit() {

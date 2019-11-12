@@ -14,12 +14,12 @@ export class TaskComponent implements OnInit {
   task;
 
   constructor(private route: ActivatedRoute, private tasksSer: TasksService, private router: Router, private title: Title) {
-    this.taskId = this.route.snapshot.paramMap.get('id');
-    this.task = this.tasksSer.tasks[this.taskId];
-    this.title.setTitle(this.task.title + ' - Task Manager');
+    this.title.setTitle('Task Manager');
   }
 
   ngOnInit() {
+    this.taskId = this.route.snapshot.paramMap.get('id');
+    this.task = this.tasksSer.tasks[this.taskId];
   }
 
   saveTask() {
