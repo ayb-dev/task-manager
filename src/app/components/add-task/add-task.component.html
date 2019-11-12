@@ -1,1 +1,4 @@
-<p>add-task works!</p>
+<input #taskTitle type="text" class="form-control" placeholder="Task Title">
+<textarea #taskDes type="text" class="form-control" placeholder="Task Description"></textarea>
+<button class="btn btn-primary" (click)="saveTask(taskTitle, taskDes)">Save</button>
+<a class="btn btn-danger" routerLink="/">Cancel</a>

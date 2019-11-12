@@ -18,4 +18,11 @@ export class TasksService {
   deleteTask(i) {
     this.tasks.splice(i, 1);
   }
+
+  saveTask(taskTitl, taskDes) {
+    this.tasks.push({
+      title: taskTitl,
+      description: taskDes
+    })
+  }
 }
